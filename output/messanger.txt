@@ -1,0 +1,17 @@
+Places TGVMAX disponibles : 8
+Depart : 5:49
+ Numero de train : 6601
+Depart : 5:49
+ Numero de train : 6601
+Depart : 9:58
+ Numero de train : 6609
+Depart : 13:50
+ Numero de train : 6617
+Depart : 15:49
+ Numero de train : 6621
+Depart : 9:58
+ Numero de train : 6609
+Depart : 13:50
+ Numero de train : 6617
+Depart : 15:49
+ Numero de train : 6621
