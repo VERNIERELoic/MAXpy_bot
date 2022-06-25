@@ -1,0 +1,5 @@
+time
+json
+python-telegram-bot
+configparser
+requests
