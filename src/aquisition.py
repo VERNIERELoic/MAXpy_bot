@@ -34,11 +34,12 @@ def download_json(url):
     request = requests.get(url).text
     json_data = json.loads(request)
 
-    with open('../data/train.json', 'w') as f:
+    with open('data/train.json', 'w') as f:
         json.dump(json_data, f)
-        print(json_data)
 
     if json_data is None:
+        print("Update failed !")
         return False
     else:
+        print("Update completed !")
         return True

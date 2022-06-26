@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+
+  maxpy:
+    container_name: maxpy
+    build:
+      context: .
+      dockerfile: Dockerfile/Dockerfile_maxpy
+    restart: on-failure
+    volumes:
+      - ./:/maxpy/
+    networks:
+      - net_common
+
+networks:
+  net_common:
+    external:
+      name: net_common

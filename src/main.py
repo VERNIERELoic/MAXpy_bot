@@ -1,5 +1,5 @@
 from aquisition import *
-from  output import *
+from  analysis import *
 import time
 
 def main():
@@ -13,7 +13,6 @@ def main():
             time.sleep(5)
         else:
             time.sleep(5)
-
 
 
 if __name__ == "__main__":
