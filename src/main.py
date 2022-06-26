@@ -5,7 +5,7 @@ import time
 def main():
     
     url = request_custo()
-    seats = get_seats(0)
+    seats = get_seats(0,1)
 
     while(1):
         if download_json(url):
