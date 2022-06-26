@@ -33,7 +33,7 @@ configparser
 
 ```bash
 # clone the priject
-git clone url
+git clone https://github.com/VERNIERELoic/MAXpy_bot.git
 # Go into the project folder
 cd maxpy-bot
 # Run the docker compose to start the bot

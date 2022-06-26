@@ -33,7 +33,7 @@ def get_seats(old_seats):
         messanger_train_data = "Depart : {}\n Numero de train : {}\n".format(
             time, train_id)
 
-    if old_seats < seats:
+    if old_seats != seats:
         # TODO -> new_seats = check_new_seats(old, new)
         send_alert("Nouveaux sieges disponibles 🎉\n"+seats_available+ "\n 🕑 "+ str(train_list) +"")
     
