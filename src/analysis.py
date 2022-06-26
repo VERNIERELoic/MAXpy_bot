@@ -35,7 +35,7 @@ def get_seats(old_seats):
 
     if old_seats != seats:
         # TODO -> new_seats = check_new_seats(old, new)
-        send_alert(""+seats_available+"\n 🕑 "+ str(train_list) +"\n")
+        send_alert(""+seats_available+ "\n 🕑 "+ str(train_list) +"")
     
 
     return seats
