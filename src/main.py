@@ -32,10 +32,12 @@ def main():
         travels_objs.append(Travel(list_config[i][0], list_config[i][1], list_config[i][2], ""+list_config[i][1]+"-->"+list_config[i][2]+""))
 
     isFistTimeInLoop = True
+    test = 1
     while(1):
         for i in range(len(travels_objs)):
             travels_objs[i].set_url()
-            if travels_objs[i].get_data(i):
+            #if travels_objs[i].get_data(i):
+            if test == 1:
                 travels_objs[i].read_data(i, isFistTimeInLoop)
                 time.sleep(5)
             else:

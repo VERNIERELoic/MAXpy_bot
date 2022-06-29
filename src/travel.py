@@ -13,6 +13,7 @@ class Travel:
         self.arrival = arrival
         self.seats = 1
         self.list_departures = []
+        self.p = 0
 
     def set_url(self):
         self.date.replace("/", "%2F")
@@ -22,8 +23,8 @@ class Travel:
 
         self.url = url
     
-    def set_seat(self, seats):
-        self.seats = seats
+    def set_seat(self, new_seats):
+        self.seats = new_seats
 
     def set_travel(self,travel):
         self.travel = travel
@@ -33,14 +34,14 @@ class Travel:
             data = json.load(f)
         
         new_seats = data['nhits']
-        
+
         if new_seats != 0:
 
             start = data['records'][0]['fields']['origine']
             end = data['records'][0]['fields']['destination']
 
             self.set_travel("{} --> {}".format(start, end))
-            seats_available = "Places TGVMAX disponibles : {}\n 📅 Date: {}\n 📍 Trajet: {}".format(self.seats, self.date, self.travel_json)
+            seats_available = "Places TGVMAX disponibles : {}\n 📅 Date: {}\n 📍 Trajet: {}".format(new_seats, self.date, self.travel_json)
 
             train_list = []
 
@@ -55,17 +56,25 @@ class Travel:
                     time, train_id)
 
             if self.seats != new_seats:
-                self.send_alert(""+seats_available+ "\n 🕑 "+ str(train_list) +"")
                 self.set_seat(new_seats)
+                seats_available = "Places TGVMAX disponibles : {}\n 📅 Date: {}\n 📍 Trajet: {}".format(self.seats, self.date, self.travel_json)
+                self.send_alert(""+seats_available+ "\n 🕑 "+ str(train_list) +"")
+
         else:
             if isFistTimeInLoop == True:
                 no_train_data = "Dsl, Auncun train pour le moment pour :\n📅 Date: {}\n 📍 Trajet: {} \n Nous vous informerons des qu'une place est disponible !".format(self.date, self.travel_config)
                 self.send_alert(no_train_data)
 
+            if self.seats > new_seats:
+                no_train_data = "Oupsss... places ne sont plus disponible pour :\n📅 Date: {}\n 📍 Trajet: {} \n Nous vous informerons des qu'une place est disponible !".format(self.date, self.travel_config)
+                self.send_alert(no_train_data)
+
+
 
         self.seats = new_seats
-            
-                
+        self.p+=1
+        print(self.p,self.seats, new_seats)
+       
     def send_alert(self, message):
         with open('data/keys.json', 'r') as keys_file:
             k = json.load(keys_file)
@@ -87,4 +96,3 @@ class Travel:
         else:
             print("Update completed !")
             return True
-
