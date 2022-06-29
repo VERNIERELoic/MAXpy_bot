@@ -28,7 +28,6 @@ requests
 configparser
 ```
 
-
 ## 1.2 Deploy
 
 ```bash
@@ -44,12 +43,18 @@ docker-compose up -d
 
 at the your of the project, edit the ./config/config.ini file to setup your alerts
 
+Section name must be "TRAVEL{travelnum}
 ```ini
-[RESEARCH]
-
+[TRAVEL1]
 DATE = 2022/06/29
 FROM = PARIS
 TO = LYON
+
+[TRAVEL2]
+DATE = 2022/07/01
+FROM = LYON
+TO = PARIS
+
 ```
 
 To apply modification, you must restart the docker stack as follow : 
