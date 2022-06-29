@@ -16,11 +16,11 @@ Use this bot !
 - Internet connection
 - Linux OS
 
-import list : 
+Import list : 
 ```py
 import json, telegram, sys, os, requests, configparser
 ```
-package list : 
+Package list : 
 ```py
 json
 python-telegram-bot
@@ -41,7 +41,7 @@ docker-compose up -d
 
 ## 1.3 Config file
 
-at the your of the project, edit the ./config/config.ini file to setup your alerts
+At the your of the project, edit the ./config/config.ini file to setup your alerts
 
 Section name must be "TRAVEL{travelnum}
 ```ini
