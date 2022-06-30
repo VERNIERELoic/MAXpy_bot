@@ -45,9 +45,13 @@ docker-compose up -d
 at the your of the project, edit the ./config/config.ini file to setup your alerts
 
 ```ini
-[RESEARCH]
+[TRAVEL1]
+DATE = 2022/07/01
+FROM = PARIS
+TO = LYON
 
-DATE = 2022/06/29
+[TRAVEL2]
+DATE = 2022/07/03
 FROM = PARIS
 TO = LYON
 ```
