@@ -37,7 +37,6 @@ def main():
         )
 
     isFistTimeInLoop = True
-    test = 1
     while 1:
         for i in range(len(travels_objs)):
             travels_objs[i].set_url()

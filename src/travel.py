@@ -76,12 +76,12 @@ class Travel:
                     self.date, self.travel_config
                 )
                 self.send_alert(no_train_data)
-
-            if self.seats > new_seats:
-                no_train_data = "Oupsss... places ne sont plus disponible pour :\n📅 Date: {}\n 📍 Trajet: {} \n Nous vous informerons des qu'une place est disponible !".format(
-                    self.date, self.travel_config
-                )
-                self.send_alert(no_train_data)
+            # else:
+            #     if self.seats > new_seats:
+            #         no_train_data = "Oupsss... places ne sont plus disponible pour :\n📅 Date: {}\n 📍 Trajet: {} \n Nous vous informerons des qu'une place est disponible !".format(
+            #             self.date, self.travel_config
+            #         )
+            #         self.send_alert(no_train_data)
 
         self.seats = new_seats
         self.p += 1
