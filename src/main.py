@@ -23,7 +23,6 @@ def get_config():
 
 
 def main():
-
     list_config = get_config()
     travels_objs = []
     for i in range(len(list_config)):
@@ -42,9 +41,9 @@ def main():
             travels_objs[i].set_url()
             if travels_objs[i].get_data(i):
                 travels_objs[i].read_data(i, isFistTimeInLoop)
-                time.sleep(5)
+                time.sleep(60)
             else:
-                time.sleep(5)
+                time.sleep(60)
         isFistTimeInLoop = False
 
 
