@@ -4,17 +4,16 @@ Author : @Loic VERNIERE
 
 ## USE CASE
 
-You can't found a train according to your subscription at MAXJEUNE ? 
+You can't found a train according to your MAXJEUNE subscription ? 
 
 Use this bot ! 
 
-**MAXy** will send your email notification when a seat is available based on yout criterials !
+**MAXy** will send telegram notification when a seat is available based on yout criterials !
 
 ## 1.1 Requierement
-- Git installed
-- Docker/Docker-compose installed
+- Git
+- Docker/Docker-compose
 - Internet connection
-- Linux OS
 
 import list : 
 ```py
@@ -32,7 +31,7 @@ configparser
 ## 1.2 Deploy
 
 ```bash
-# clone the priject
+# clone the project
 git clone https://github.com/VERNIERELoic/MAXpy_bot.git
 # Go into the project folder
 cd maxpy-bot
